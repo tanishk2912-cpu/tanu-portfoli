@@ -157,9 +157,26 @@
       document.body.classList.contains("light-theme") ? "☀️" : "🌙";
   });
 </script>
+ <script>
+  const music = document.getElementById("bg-music");
+  const musicBtn = document.getElementById("music-toggle");
 
+  let isPlaying = false;
+
+  musicBtn.addEventListener("click", () => {
+    if (isPlaying) {
+      music.pause();
+      musicBtn.textContent = "🔊";
+    } else {
+      music.play();
+      musicBtn.textContent = "⏸️";
+    }
+    isPlaying = !isPlaying;
+  });
+</script>
 </body>
 </html>
+
 
 
 
