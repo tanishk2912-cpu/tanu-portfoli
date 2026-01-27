@@ -147,8 +147,19 @@
         renderer.setSize(container.clientWidth, container.clientHeight);
     });
 </script>
+    <script>
+  const toggleBtn = document.getElementById("theme-toggle");
+
+  toggleBtn.addEventListener("click", () => {
+    document.body.classList.toggle("light-theme");
+    toggleBtn.textContent =
+      document.body.classList.contains("light-theme") ? "☀️" : "🌙";
+  });
+</script>
+
 </body>
 </html>
+
 
 
 
