@@ -44,42 +44,43 @@ nav a:hover {
   color: #fff;
   gap: 40px;
 }
+
 .hero-text {
-    max-width: 500px;
+  max-width: 500px;
 }
 
-.hero h2 {
-    font-size: 48px;
-    margin-bottom: 20px;
+.hero-text h1 {
+  font-size: 48px;
+  margin-bottom: 15px;
 }
 
-.hero p {
-    font-size: 18px;
-    max-width: 600px;
-    margin-bottom: 30px;
-    color: #cbd5f5;
+.hero-text h1 span {
+  color: #38bdf8;
 }
 
+.hero-text p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #cbd5f5;
+  margin-bottom: 25px;
+}
 
 .btn {
-    display: inline-block;
-    width: fit-content;
-    padding: 12px 25px;
-    background-color: #38bdf8;
-    color: #0f172a;
-    text-decoration: none;
-    border-radius: 6px;
-    font-weight: bold;
-} 
+  display: inline-block;
+  padding: 12px 28px;
+  background: #38bdf8;
+  color: #020617;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: 600;
+}
+
 .hero-img img {
   width: 350px;
   max-width: 100%;
   animation: float 4s ease-in-out infinite;
-  }
+}
 
-.btn:hover {
-    background-color: #0ea5e9;
-} 
 /* About Section */
 .about {
     padding: 80px 60px;
@@ -259,6 +260,19 @@ nav a:hover {
         font-size: 16px;
     }
 }
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
 
 
 
