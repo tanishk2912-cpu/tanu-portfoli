@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tanishk | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <h1 class="logo">PORTFOLIO</h1>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <h2>Hi, I’m Tanishk 👋</h2>
+        <p>
+            A Computer Science Engineer, creating modern websites,
+            portfolios, and social media experiences that stand out.
+        </p>
+        <a href="#contact" class="btn">Let’s Work Together</a>
+        <div class="hero-img">
+    <img src="images/avatar.png" alt="Tanishk Avatar">
+  </div>
+
+        
+    </section>
+    <section class="about" id="about">
+    <h2>About Me</h2>
+
+    <div class="about-content">
+        <p>
+            I’m <strong>Tanishk</strong>, a B.Tech graduate in <strong>Computer Science Engineering.</strong>
+            I have a strong interest in designing and developing digital experiences that are clean,
+            modern, and user-focused.
+        </p>
+
+        <p>
+            I work as a <strong>portfolio designer, website designer, and social media handler</strong>,
+            helping individuals and brands build a professional online presence. With a mix of
+            technical knowledge and creative thinking, I aim to deliver designs that look great
+            and perform effectively.
+        </p>
+    </div>
+</section>
+<section class="skills" id="skills">
+    <h2 class="reveal">My Skills</h2>
+
+    <div class="skills-container">
+        <div class="skill-card reveal">
+            <h3>HTML</h3>
+            <p>Creating structured, semantic, and accessible web layouts.</p>
+        </div>
+
+        <div class="skill-card reveal">
+            <h3>CSS</h3>
+            <p>Designing modern, responsive, and visually appealing interfaces.</p>
+        </div>
+
+        <div class="skill-card reveal">
+            <h3>Web Design</h3>
+            <p>Building clean UI/UX focused websites that convert and engage.</p>
+        </div>
+
+        <div class="skill-card reveal">
+            <h3>Social Media</h3>
+            <p>Managing content, branding, and digital growth strategies.</p>
+        </div>
+    </div>
+</section>
+<section class="contact" id="contact">
+    <h2 class="reveal">Get In Touch</h2>
+
+    <p class="contact-text reveal">
+        Have a project in mind or just want to connect?
+        Feel free to reach out — I’m always open to new opportunities.
+    </p>
+
+    <div class="contact-info reveal">
+        <p><strong>Email:</strong> tanishkgurjar221133@gmail.com</p>
+        <p><strong>Location:</strong> India</p>
+    </div>
+
+    <a href="https://wa.me/9352585816" target="hello" class="btn reveal">
+        Say Hello
+    </a>
+</section>
+<script src="https://cdn.jsdelivr.net/npm/three@0.152.2/build/three.min.js"></script>
+<script>
+    const container = document.getElementById("three-container");
+
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(
+        75,
+        container.clientWidth / container.clientHeight,
+        0.1,
+        1000
+    );
+
+    const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+    renderer.setSize(container.clientWidth, container.clientHeight);
+    container.appendChild(renderer.domElement);
+
+    // Geometry
+    const geometry = new THREE.IcosahedronGeometry(1.8, 1);
+    const material = new THREE.MeshStandardMaterial({
+        color: 0x38bdf8,
+        wireframe: true
+    });
+
+    const shape = new THREE.Mesh(geometry, material);
+    scene.add(shape);
+
+    // Light
+    const light = new THREE.PointLight(0xffffff, 1);
+    light.position.set(5, 5, 5);
+    scene.add(light);
+
+    camera.position.z = 4;
+
+    function animate() {
+        requestAnimationFrame(animate);
+        shape.rotation.x += 0.004;
+        shape.rotation.y += 0.004;
+        renderer.render(scene, camera);
+    }
+
+    animate();
+
+    // Resize fix
+    window.addEventListener("resize", () => {
+        camera.aspect = container.clientWidth / container.clientHeight;
+        camera.updateProjectionMatrix();
+        renderer.setSize(container.clientWidth, container.clientHeight);
+    });
+</script>
+</body>
+</html>
+
