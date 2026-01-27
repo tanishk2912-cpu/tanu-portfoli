@@ -243,6 +243,23 @@ nav a:hover {
         font-size: 16px;
     }
 }
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding-top: 100px;
+  }
+
+  .hero-text h1 {
+    font-size: 36px;
+  }
+
+  .hero-img img {
+    width: 250px;
+  }
+}
+
+
 
 
 
