@@ -34,7 +34,7 @@ body {
 }
 .theme-toggle {
   position: fixed;
-  top: 40px;
+  top: 60px;
   right: 20px;
   background: var(--accent);
   border: none;
@@ -306,6 +306,7 @@ nav a:hover {
     transform: translateY(0);
   }
 }
+
 
 
 
