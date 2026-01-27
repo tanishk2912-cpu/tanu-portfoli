@@ -173,17 +173,18 @@
 
   musicBtn.addEventListener("click", () => {
     if (isPlaying) {
-      music.pause();
-      musicBtn.textContent = "🔊";
-    } else {
       music.play();
       musicBtn.textContent = "⏸️";
+    } else {
+      music.pause();
+      musicBtn.textContent = "🔊";
     }
     isPlaying = !isPlaying;
   });
 </script>
 </body>
 </html>
+
 
 
 
