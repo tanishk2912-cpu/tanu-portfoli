@@ -81,15 +81,42 @@ nav a:hover {
 
 /* Hero Section */
 .hero {
+  position: relative;
   min-height: 100vh;
-  padding: 0 8%;
+  overflow: hidden;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  background: #020617;
-  color: #fff;
-  gap: 40px;
+  justify-content: center;
+  text-align: center;
 }
+
+.bg-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 120%;
+  height: 120%;
+  object-fit: cover;
+  transform: translate(-50%, -50%);
+  z-index: -2;
+  opacity: 0.25; /* adjust if needed */
+}
+
+/* Dark overlay for readability */
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(2, 6, 23, 0.7);
+  z-index: -1;
+}
+
+.hero-content {
+  z-index: 2;
+  max-width: 420px;
+  padding: 20px;
+}
+
 
 .hero-text {
   max-width: 500px;
@@ -325,6 +352,14 @@ nav a:hover {
     font-size: 16px;
   }
 }
+@media (max-width: 768px) {
+  .bg-video {
+    width: 200%;
+    height: 200%;
+  }
+}
+
+
 
 
 
